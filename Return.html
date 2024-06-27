@@ -1,0 +1,70 @@
+<html>
+    <head>
+        <title> Return</title>
+        <link rel="stylesheet" href="book.css">
+    </head>
+    <body>
+        <header>
+            <h2 class="library"> <a href="Library.html"> Library </a> </h2>
+            <nav class="navigation">
+                 <a href="hom.html">Home</a>
+                     <a href="History.html">History</a>
+                     <a href="story.html">Story</a>
+                 <a href="Anime.html">Anime</a>
+                 <button class="btnlogin-popup">Login</button>
+            </nav>
+      </header>
+
+
+        <div class="return">
+             
+            <form action="#">
+                <div class="solo">
+                    <form>
+
+                        <label for="name"> Your name: </label>
+                        <input type="text" id="name" name="name"> <br><br>
+            
+                        <label for="book"> Name of book: </label>
+                        <input type="text" id="book" name="book"> <br><br>
+            
+                        <label for="day"> Enter week: </label>
+                        <select type="number" id="day">
+                            <option value="">1</option>
+                            <option value="1">2</option>
+                            <option value="2">3</option>
+                            <option value="3">4</option>
+                            <option value="4">5</option>
+                            <option value="5">6</option>
+                            <option value="6">7</option>
+                            <option value="7">8</option>
+                            <option value="8">9</option>
+                            <option value="9">10</option>
+                          </select>
+                         
+                        <button class="but" onclick="convert()"> Return</button>
+                        
+                        <p id="money"></p>
+            
+                    </form>
+                    </div>
+
+            </form>
+        </div>
+
+        <script>
+            function convert(){
+               var usdValue = document.getElementById('day').value;
+               var exchangeRate = 10;
+               var inrValue = (usdValue * exchangeRate).toFixed(0);
+               {
+                document.getElementById('money').innerHTML ="Pay:" + inrValue;
+               }
+                
+            }
+       </script>
+
+        
+       
+    </body>
+</html>
